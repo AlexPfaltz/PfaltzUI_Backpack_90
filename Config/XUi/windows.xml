@@ -3,25 +3,25 @@
 	<remove xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/label[@name='windowName']"/>
 
 	<append xpath="/windows/window[@name='windowBackpack']">
-		<panel depth="0" name="content" pos="0,0" width="100%" height="582" disableautobackground="true">
-			<sprite depth="8" name="backgroundMain" pos="0,-46" sprite="menu_empty3px" width="407" height="536" color="[black]" type="sliced" fillcenter="false" on_press="true"  gamepad_selectable="false"/>
+		<panel depth="0" name="content" pos="0,0" width="100%" height="725" disableautobackground="true">
+			<sprite depth="8" name="backgroundMain" pos="0,-46" width="379" height="679" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true"  gamepad_selectable="false"/>
 			<rect name="tabsInventory" controller="TabSelector" select_tab_contents_on_open="false">
-				<rect name="tabsHeader" height="39" depth="0">
-					<grid name="tabButtons" pos="42,-6" depth="2" rows="1" cols="4" cell_width="36" cell_height="36" repeat_content="true" arrangement="horizontal">
+				<rect depth="0" name="tabsHeader" height="39">
+					<grid depth="2" name="tabButtons" pos="42,-6" rows="1" cols="2" cell_width="36" cell_height="36" repeat_content="true" arrangement="horizontal">
 						<rect>
-							<simplebutton name="tabButton" depth="2" pos="-1,0" width="36" height="36" font_size="34" bordercolor="[transparent]" defaultcolor="[darkGrey]" selectedsprite="menu_empty" selectedcolor="[mediumGrey]" foregroundlayer="false" />
+							<simplebutton depth="2" name="tabButton" pos="-1,0" width="36" height="36" font_size="34" bordercolor="[transparent]" defaultcolor="[darkGrey]" selectedsprite="menu_empty" selectedcolor="[mediumGrey]" foregroundlayer="false" />
 							<sprite depth="8" sprite="menu_empty2px" pos="35,0" width="2" height="35" color="[black]" visible="{tabsenabled}" />
 						</rect>
 					</grid>
 				</rect>
 				<rect depth="10" name="tabsContents" pos="0,-46" controller="Backpack">
 					<rect tab_key="1">
-						<grid depth="1" name="inventory" rows="8" cols="6" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<grid depth="1" name="inventory" rows="9" cols="5" pos="3,-3" cell_width="75" cell_height="75" repeat_content="true" >
 							<backpack_item_stack name="0"/>
 						</grid>
 					</rect>
 					<rect tab_key="2">
-						<grid depth="1" name="inventory" rows="8" cols="6" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<grid depth="1" name="inventory" rows="9" cols="5" pos="3,-3" cell_width="75" cell_height="75" repeat_content="true" >
 							<backpack_item_stack name="0"/>
 						</grid>
 					</rect>
